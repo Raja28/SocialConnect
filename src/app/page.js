@@ -39,7 +39,7 @@ export default function LoginPage() {
     } catch (err) {
       console.error("Registration Error:", err);
       setError(
-        err.response?.data?.message ||
+        err.response?.data?.error ||
         "Something went wrong. Please try again.",
       );
     } finally {
@@ -96,11 +96,11 @@ export default function LoginPage() {
                 <label htmlFor="password" className="block text-sm font-semibold text-gray-700">
                   Password
                 </label>
-                <div className="text-sm">
+                {/* <div className="text-sm">
                   <Link href="/forgot-password" title="Forgot Password" className="font-medium text-indigo-600 hover:text-indigo-500">
                     Forgot your password?
                   </Link>
-                </div>
+                </div> */}
               </div>
               <div className="mt-1 relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -128,17 +128,7 @@ export default function LoginPage() {
               </div>
             </div>
 
-            <div className="flex items-center">
-              <input
-                id="remember-me"
-                name="remember-me"
-                type="checkbox"
-                className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
-              />
-              <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-                Remember me
-              </label>
-            </div>
+            {error && <p className="text-red-500 text-xs">{error}</p>}
 
             <div>
               <button
@@ -146,7 +136,7 @@ export default function LoginPage() {
                 type="submit"
                 className="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-200"
               >
-                Sign in
+                { isLoading ? "Signing in..." : "Sign in"}
               </button>
             </div>
           </form>
