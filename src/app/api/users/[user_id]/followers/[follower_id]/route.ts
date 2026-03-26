@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { headers } from "next/headers";
-import { supabase } from "../../../../../../lib/supabase";
-import { withErrorHandling } from "../../../../../_utils/withErrorHandling";
+import { supabase } from "../../../../../lib/supabase";
+import { withErrorHandling } from "../../../../_utils/withErrorHandling";
 
 // Remove a follower (force-unfollow): delete row follower_id -> me
 export const DELETE = withErrorHandling(async (
