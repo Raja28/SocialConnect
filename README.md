@@ -99,7 +99,7 @@ All API endpoints are prefixed with `/api`. Most endpoints require a valid JWT t
 ### Installation
 
 1. **Clone the repository:**
-   ```
+```
 git clone: https://github.com/Raja28/SocialConnect.git
 npm install
 npm run dev
