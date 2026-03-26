@@ -4,6 +4,10 @@ Welcome to **SocialConnect**! This is a modern, full-stack social media applicat
 
 ---
 
+## Login Credential
+email: socialconnect@gmail.com
+password: socialconnect@gmail.com
+
 ## Demo Link
 Visit the website: [SocialConnect](https://social-connect-flame.vercel.app/)
 
